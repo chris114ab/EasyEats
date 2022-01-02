@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity"
+    android:animateLayoutChanges="true"
+    >
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="314dp"
+        android:layout_height="177dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/title" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="148dp"
+        android:layout_height="139dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/bw_icon" />
+
+    <Button
+        android:id="@+id/shopBtn"
+        android:layout_width="0dp"
+        android:layout_height="163dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_border"
+        android:drawableTop="@drawable/smaller_shop"
+        android:fontFamily="@font/poller_one"
+        android:includeFontPadding="false"
+        android:onClick="goToShop"
+        android:paddingBottom="10dp"
+        android:text="Shop"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/panel"
+        app:layout_constraintTop_toTopOf="@+id/panel"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <View
+        android:id="@+id/panel"
+        android:layout_width="0dp"
+        android:layout_height="531dp"
+        android:background="@drawable/secondary_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/meal"
+        android:layout_width="0dp"
+        android:layout_height="162dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/button_border"
+        android:drawableTop="@drawable/smaller_meal"
+        android:fontFamily="@font/poller_one"
+        android:onClick="mealMenu"
+        android:text="Meals"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constrainedWidth="false"
+        app:layout_constraintEnd_toEndOf="@+id/panel"
+        app:layout_constraintTop_toTopOf="@+id/panel"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="0dp"
+        android:layout_height="168dp"
+        android:layout_marginTop="16dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/panel"
+        app:layout_constraintTop_toTopOf="@+id/panel"
+        app:layout_constraintWidth_percent="0.55">
+
+        <Button
+            android:id="@+id/editBtn"
+            android:layout_width="98dp"
+            android:layout_height="94dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="80dp"
+            android:background="@drawable/floating_action"
+            android:drawableTop="@drawable/edit_icon"
+            android:padding="15dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/popupView"
+            app:layout_constraintTop_toTopOf="@+id/popupView" />
+
+        <Button
+            android:id="@+id/newBtn"
+            android:layout_width="108dp"
+            android:layout_height="93dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/floating_action"
+            android:drawableTop="@drawable/add"
+            android:padding="10dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/popupView"
+            app:layout_constraintTop_toTopOf="@+id/popupView" />
+
+        <View
+            android:id="@+id/popupView"
+            android:layout_width="154dp"
+            android:layout_height="162dp"
+            android:layout_marginEnd="36dp"
+            android:background="@drawable/button_border"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/newText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="108dp"
+            android:background="@android:color/white"
+            android:fontFamily="@font/poller_one"
+            android:text="New"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/popupView"
+            app:layout_constraintTop_toBottomOf="@+id/newBtn" />
+
+        <TextView
+            android:id="@+id/editText"
+            android:layout_width="64dp"
+            android:layout_height="29dp"
+            android:layout_marginEnd="104dp"
+            android:background="@android:color/white"
+            android:fontFamily="@font/poller_one"
+            android:text="Edit"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/popupView"
+            app:layout_constraintTop_toBottomOf="@+id/editBtn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
